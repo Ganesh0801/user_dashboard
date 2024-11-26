@@ -1,0 +1,7 @@
+.footer{
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.637),rgba(207, 110, 224, 0.674),rgba(216, 6, 170, 0.491));
+    text-align: center;
+    padding-top: 50px;
+}

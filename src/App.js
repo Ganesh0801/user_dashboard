@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from "../src/component/Header/Header";
+import Main from "../src/component/Main/Main";
+import Footer from "../src/component/Footer/Footer"
 
-function App() {
+const App = () => {
+  const [users, setUsers] = useState([]); 
+  const [isEditing, setIsEditing] = useState(false);
+  const [editUser, setEditUser] = useState(null); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Main
+        users={users}
+        setUsers={setUsers}
+        isEditing={isEditing}
+        setIsEditing={setIsEditing}
+        editUser={editUser}
+        setEditUser={setEditUser}
+      />
+      <Footer text={"User Dashboard Management"} />
+    </>
   );
 }
 
